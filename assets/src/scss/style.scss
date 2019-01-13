@@ -1,0 +1,25 @@
+@import 'abstracts/variables/variables';
+@import  'abstracts/functions/functions';
+@import  'abstracts/mixins/mixins';
+
+
+// 2. Vendors
+@import  'vendor/normalize.scss';
+// 3. Core
+@import  'core/scaffolding';
+@import  'core/fonts_premium';
+@import  'core/typography';
+@import  'core/icongraphy';
+@import  'core/grid';
+@import  'core/helpers';
+
+// 4. Layout-related sections
+@import  'layout/header';
+@import  'layout/footer';
+
+// 5. Components
+@import  'components/buttons';
+
+
+// 6. Page-specific styles
+@import  'pages/home';

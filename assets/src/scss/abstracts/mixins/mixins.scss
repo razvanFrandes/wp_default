@@ -1,0 +1,106 @@
+@mixin clearfix {
+    &::after {
+        clear: both;
+        content: "";
+        display: block;
+    }
+}
+
+
+@mixin full-width($support-type: margin, $min-width:null) {
+    @if $support-type=='margin' {
+        margin-left: calc(-50vw + 50%);
+        margin-right: calc(-50vw + 50%);
+    }
+    @if $support-type=='position' {
+        width: 100vw;
+        position: relative;
+        left: 50%;
+        right: 50%;
+        margin-left: -50vw;
+        margin-right: -50vw;
+    }
+    @if $support-type=='translate' {
+        width: 100vw;
+        transform: translateX(calc((#{$min-width} - 100vw)/2));
+    }
+}
+
+@mixin transition( $speed , $time ) {
+    transition-duration: $speed;
+    transition-timing-function: $time;
+}
+
+
+@mixin shadow($level: 1) {
+    @if $level==0 {
+        box-shadow: 0px 0px 0px 0px transparent;
+    }
+
+    @else if $level==1 {
+        box-shadow: 0px 5px 40px -14px $c-black;
+    }
+    @else if $level==2 {
+        box-shadow: 0px 5px 16px -7px $c-black;
+    }
+    @else if $level==3 {
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+    }
+    @else if $level==4 {
+        box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+    }
+    @else if $level==5 {
+        box-shadow: 0 19px 38px rgba(0, 0, 0, 0.30), 0 15px 12px rgba(0, 0, 0, 0.22);
+    }
+    @else if $level==6 {
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.11);
+    }
+}
+
+
+
+@mixin media($breakpoint) {
+    @if $breakpoint==sm {
+        @media screen and( max-width: map-get($grid-breakpoints, sm) - 1) {
+            @content
+        }
+        ;
+    }
+    @if $breakpoint==md {
+        @media screen and( max-width: map-get($grid-breakpoints, md) - 1) {
+            @content
+        }
+        ;
+    }
+    @if $breakpoint==desk {
+        @media screen and( max-width: map-get($grid-breakpoints, lg) - 1) {
+            @content
+        }
+        ;
+    }
+}
+
+@mixin media_min($breakpoint) {
+    @if $breakpoint==phone {
+        @media screen and( min-width: map-get($grid-breakpoints, sm) - 1) {
+            @content
+        }
+        ;
+    }
+    @if $breakpoint==tab {
+        @media screen and( min-width: map-get($grid-breakpoints, md) - 1) {
+            @content
+        }
+        ;
+    }
+    @if $breakpoint==desk {
+        @media screen and( min-width: map-get($grid-breakpoints, lg) - 1) {
+            @content
+        }
+        ;
+    }
+}
+
+@import 'breakpoints';
+@import 'grid';
+@import 'grid-framework';

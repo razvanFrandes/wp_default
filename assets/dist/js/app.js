@@ -1,0 +1,12 @@
+/**
+ * VENDORS
+ */
+; 
+
+
+/**
+ * Components
+ */
+(function($) {
+		
+})( jQuery );
