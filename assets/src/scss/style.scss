@@ -14,12 +14,11 @@
 @import  'core/helpers';
 
 // 4. Layout-related sections
-@import  'layout/header';
-@import  'layout/footer';
+@import  'layout/header.sass';
+@import  'layout/footer.sass';
 
 // 5. Components
 @import  'components/buttons';
 
 
 // 6. Page-specific styles
-@import  'pages/home';

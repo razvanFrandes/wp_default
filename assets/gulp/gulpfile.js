@@ -126,9 +126,9 @@ gulp.task('browser-sync', function() {
 // Go to : assets/dist/fonts/fonts.list to add your fonts
 //
 var options = {
-    cssFilename: '_02_fonts.scss',
+    cssFilename: 'fonts.scss',
     fontsDir: '../dist/fonts/',
-    cssDir: '../src/scss/03_core/',
+    cssDir: '../src/scss/core/',
     format: 'woff'
 };
 
@@ -139,7 +139,7 @@ gulp.task('google-fonts', function () {
     });
 
 gulp.task('fonts-url' , function() {
-    return gulp.src( '../src/scss/03_core/_02_fonts.scss', {base: "./"})
+    return gulp.src( '../src/scss/core/fonts.scss', {base: "./"})
     .pipe(replace('url(../dist/fonts/', 'url(../fonts/'))
     .pipe(gulp.dest("./"));
 
@@ -156,7 +156,7 @@ gulp.task('fonts-url' , function() {
 gulp.task('watch', ['browser-sync'], function() {
 
     // Watch .scss files
-    gulp.watch('../src/scss/**/*.scss', ['styles-dev', reload]);
+    gulp.watch(['../src/scss/**/*.scss', '../src/scss/**/*.sass'], ['styles-dev', reload]);
 
     // Watch .js files
     gulp.watch('../src/js/**/*.js', ['scripts-dev', reload]);
