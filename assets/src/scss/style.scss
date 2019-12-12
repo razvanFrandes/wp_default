@@ -1,24 +1,28 @@
-@import 'abstracts/variables/variables';
-@import  'abstracts/functions/functions';
+@import 'abstracts/variables';
+@import  'abstracts/functions';
 @import  'abstracts/mixins/mixins';
 
 
 // 2. Vendors
-@import  'vendor/normalize.scss';
+@import  'vendor/normalize';
+@import  'vendor/flickity';
+@import  'vendor/wordpress-core';
 // 3. Core
 @import  'core/scaffolding';
-@import  'core/fonts_premium';
 @import  'core/typography';
-@import  'core/icongraphy';
+// @import  'core/icongraphy';
+@import  'core/fonts';
+@import  'core/icons';
 @import  'core/grid';
 @import  'core/helpers';
 
+
 // 4. Layout-related sections
-@import  'layout/header.sass';
-@import  'layout/footer.sass';
+@import  'layout/helpers';
+@import  'layout/header';
+@import  'layout/footer';
 
 // 5. Components
 @import  'components/buttons';
-
 
 // 6. Page-specific styles

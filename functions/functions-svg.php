@@ -2,9 +2,14 @@
 /*
  * Returns contents of an SVG to the DOM
  */
-function get_svg( $name, $class = false ) {
+function get_svg( $name, $font = false, $class = false ) {
 
-  $file_path = IMG_DIR . 'svg/' . $name . '.svg';
+  if ( $font ) {
+    $file_path = IMG_DIR . 'svgFonts/' . $name . '.svg';
+  } else {
+    $file_path = IMG_DIR . 'svg/' . $name . '.svg';
+  }
+  
 
   if ( file_exists( $file_path ) ) {
 

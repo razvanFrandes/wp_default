@@ -8,5 +8,7 @@
  * Components
  */
 (function($) {
-	@import '../src/js/components/_components.js'	
+	$(document).ready(function(){
+		@import '../src/js/components/_components.js'	
+	});	
 })( jQuery );

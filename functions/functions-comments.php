@@ -25,7 +25,7 @@ function az_disable_comments_status() {
   return false;
 }
 add_filter( 'comments_open', 'az_disable_comments_status', 20, 2 );
-add_filter( 'pings_open', 'df_disable_comments_status', 20, 2 );
+add_filter( 'pings_open', 'az_disable_comments_status', 20, 2 );
 
 /**
  * Hide existing comments

@@ -4,8 +4,8 @@
 define( 'WP_ENV',        'local' );
 define( 'WWW_URL',       site_url() );
 define( 'TMPL_URI',      get_template_directory_uri() );
-define( 'TMPL_DIR',      get_template_directory() );
-define( 'IMG_DIR',       TMPL_DIR . '/assets/img/' );
+define( 'IMG_DIR',       TMPL_DIR . '/assets/dist/img/' );
+define( 'IMG_SRC',       TMPL_URI . '/assets/dist/img/' );
 define( 'SITE_NAME',     get_option( 'blogname' ) );
 define( 'SITE_TAGLINE',  get_option( 'blogdescription' ) );
 define( 'AUTHOR',        SITE_NAME . ' - '. WWW_URL );

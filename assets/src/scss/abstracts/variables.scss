@@ -1,0 +1,84 @@
+// Fonts
+$fontPrimary: 'Source Sans Pro';
+
+
+// Colors
+
+$colors : (
+	gr: (
+		1: #66BB6A, 
+	),
+	yw: (
+		1: #FFB90C,
+	),
+	wh: (
+		1: #ffffff,
+		2: #F7FAFB,
+		3: #F8FAFC
+	),
+	gy: (
+		1: #869096,
+		2: #929597
+	),
+	bk: (
+		1: #272E33,
+		2: #3A4A52,
+		3: #4A5B63,
+		4: #3d4347,
+		5: #3F464C,
+		6: #252c30,
+		7: #3a4044
+	),
+	rd: (
+		1: #EA5C5C,
+		2: #FF2C33
+	)
+);
+
+
+
+// Generate Colors
+// EX: 
+// background-color: color(black, 900)
+@function color($color, $tone: '100') {
+ 	@return map-get(map-get($colors, $color), $tone);
+}
+
+/// Map deep get
+/// .class: map-deep-get($o-grid-default-config, "layouts", "M");
+@function map-deep-get($map, $keys...) {
+    @each $key in $keys {
+        $map: map-get($map, $key);
+    }
+    @return $map;
+}
+
+$enable-grid-classes:       true !default;
+$isMobile : false;
+
+
+// Grid breakpoints
+$grid-breakpoints: (
+	xs: 600px,
+	sm: 780px,
+	md: 960px,
+	lg: 1200px
+);
+
+
+// Grid containers
+$container-max-widths: (
+	xs: 600px,
+	sm: 780px,
+	md: 960px,
+	lg: 1200px
+);
+
+// Grid columns
+//
+// Set the number of columns and specify the width of the gutters.
+
+$grid-columns:                1;
+$grid-gutter-width:           30px;
+
+$isMobile : false;

@@ -1,0 +1,80 @@
+html {
+  font-size: 18px;
+  line-height: 32px;
+  @include media(sm) {
+    font-size: 15px;
+  }
+
+}
+
+body {
+  background-color: color(wh, 1);
+  font-family: $fontPrimary;
+  line-height: 1.8;
+  color: color(bk, 4);
+}
+
+p {
+    margin-bottom: 2em; 
+    font-weight: 400;
+    width: 100%;
+
+}
+
+* {
+    &::selection {
+        background: color(gr, 1);
+        color: color(wh, 1);
+    }
+}
+
+a {
+  text-decoration: none;
+  background-color: transparent;
+  -webkit-text-decoration-skip: objects;
+}
+
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
+  margin: 2.75rem 0 1rem;
+  font-weight: 300;
+  line-height: 1.15;
+  &::selection {
+    background: color(gr, 2);
+    color: color(wh, 1);
+  }
+}
+
+h1, .h1, h2, .h2 {
+  font-size: 44px;
+  line-height: 55px;
+  @include media(xs) {
+    font-size: 2.5em;
+  }
+}
+
+h3, .h3 {
+  font-size: 22px; 
+  line-height: 25px;
+}
+
+h4, .h4 {
+  font-size: 18px; 
+  line-height: 1.3;
+}
+
+h5, .h5 {
+  font-size: 16px;
+}
+
+.text__sm {
+  font-size: 15px !important;
+  line-height: 25px;
+}
+
+.text__xs {
+  font-size: 13px !important;
+}
+
+.text__center {
+  text-align: center;
+}
