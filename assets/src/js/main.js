@@ -1,7 +1,7 @@
 /**
  * VENDORS
  */
-@import '../src/js/vendors/_vendor.js'; 
+@import '../src/js/vendors/_vendors.js'; 
 
 
 /**

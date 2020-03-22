@@ -1,0 +1,24 @@
+@font-face {
+    font-family: "icons";
+    font-display: swap;
+    src: local("icons"), url('../fonts/icons.woff') format('woff');
+}
+.ico:before {
+    font-family: "icons";
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal;
+    /* speak: none; only necessary if not using the private unicode range (firstGlyph option) */
+    text-decoration: none;
+    text-transform: none;
+}
+
+.ico-star:before {
+    content: "\E001";
+}
+
+.ico-sun:before {
+    content: "\E002";
+}

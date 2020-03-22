@@ -3,22 +3,30 @@
 @import  'abstracts/mixins/mixins';
 
 
-// 2. Vendors
-@import  'vendor/normalize';
-@import  'vendor/flickity';
-@import  'vendor/wordpress-core';
-// 3. Core
+// 2. Core
+@import  'core/fonts';
+@import  'core/fonts_premium';
+@import  'core/grid';
+@import  'core/helpers';
+@import  'core/icons'
+@import  'core/typography';
+
+@import  'core/reset';
+
 @import  'core/scaffolding';
 @import  'core/typography';
-// @import  'core/icongraphy';
-@import  'core/fonts';
+
+
 @import  'core/icons';
-@import  'core/grid';
 @import  'core/helpers';
 
 
+// 3. Vendor
+@import  'vendor/flickity';
+@import  'vendor/wordpress-core';
+
+
 // 4. Layout-related sections
-@import  'layout/helpers';
 @import  'layout/header';
 @import  'layout/footer';
 

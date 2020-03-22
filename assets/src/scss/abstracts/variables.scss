@@ -68,17 +68,18 @@ $grid-breakpoints: (
 
 // Grid containers
 $container-max-widths: (
-	xs: 600px,
-	sm: 780px,
+	xs: 540px,
+	sm: 720px,
 	md: 960px,
-	lg: 1200px
-);
+	lg: 1140px
+) !default;
 
 // Grid columns
 //
 // Set the number of columns and specify the width of the gutters.
 
-$grid-columns:                1;
-$grid-gutter-width:           30px;
+$grid-columns:                12 !default;
+$grid-gutter-width:           30px !default;
+$grid-row-columns:            6 !default;
 
 $isMobile : false;
