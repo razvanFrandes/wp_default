@@ -39,7 +39,7 @@
         "gulp-cli": "^2.2.0",
         "gulp-install": "^1.1.0",
         "natives": "^1.1.6",
-        "npm": "^6.14.3",
+        "npm": "^6.14.6",
         "save-dev": "0.0.1-security"
     }
 }
